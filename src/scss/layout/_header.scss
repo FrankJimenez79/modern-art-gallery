@@ -1,0 +1,35 @@
+@use "../abstracts/_variables" as *;
+@use "../abstracts/_mixins" as *;
+
+header {
+  figure {
+    margin-bottom: 32px;
+    img {
+      width: 100%;
+    }
+  }
+  .header_content {
+    padding-left: 16px;
+    padding-right: 16px;
+    .logo {
+      margin-bottom: 32px;
+      width: 320px;
+    }
+    p {
+      font-family: $secondary-font;
+      font-size: 20px;
+      font-weight: 400;
+      color: $grey;
+      line-height: 28px;
+      margin-bottom: 32px;
+    }
+    div.button {
+      display: flex;
+
+      img.arrow-right {
+        background-color: $gold;
+        padding: 24px;
+      }
+    }
+  }
+}
