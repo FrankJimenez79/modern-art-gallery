@@ -2,10 +2,10 @@
 @use "../abstracts/_mixins" as *;
 
 section {
-  padding-left: 16px;
-  padding-right: 16px;
   &.description-1 {
     margin-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
     img {
       width: 100%;
       margin-bottom: 25px;
@@ -35,6 +35,8 @@ section {
   }
   &.description-2 {
     margin-bottom: 120px;
+    padding-left: 16px;
+    padding-right: 16px;
     img {
       width: 100%;
       margin-bottom: 16px;

@@ -1,12 +1,15 @@
 @use "../abstracts/_variables" as *;
 @use "../abstracts/_mixins" as *;
 
-header {
+header.principal-header {
   margin-bottom: 120px;
   figure {
     margin-bottom: 32px;
+
     img {
       width: 100%;
+      height: 250px;
+      object-fit: cover;
     }
   }
   .header_content {
