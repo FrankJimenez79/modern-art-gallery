@@ -1,2 +1,17 @@
 @use "../abstracts/_variables" as *;
 @use "../abstracts/_mixins" as *;
+
+.container {
+  max-width: max-content;
+  @include breakpoint(tablet) {
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @include breakpoint(desktop) {
+    min-width: 1200px;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

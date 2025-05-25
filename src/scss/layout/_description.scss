@@ -6,9 +6,37 @@ section {
     margin-bottom: 32px;
     padding-left: 16px;
     padding-right: 16px;
+    @include breakpoint(tablet) {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 20px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @include breakpoint(desktop) {
+      padding-left: 80px;
+      padding-right: 80px;
+      gap: 80px;
+    }
     img {
       width: 100%;
       margin-bottom: 25px;
+      @include breakpoint(tablet) {
+        grid-column: 2 / span 1;
+        height: 100%;
+      }
+    }
+    div.description-1_information {
+      @include breakpoint(tablet) {
+        grid-row: 1 / span 1;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-right: 40px;
+      }
+      @include breakpoint(desktop) {
+        max-width: 330px;
+        padding-bottom: 50px;
+      }
     }
     h2,
     h2 span {
@@ -37,13 +65,41 @@ section {
     margin-bottom: 120px;
     padding-left: 16px;
     padding-right: 16px;
+    @include breakpoint(tablet) {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-rows: 0.9fr 1.1fr;
+      gap: 10px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @include breakpoint(desktop) {
+      padding-left: 80px;
+      padding-right: 80px;
+      gap: 25px;
+    }
     img {
       width: 100%;
       margin-bottom: 16px;
+      &.inspired-1 {
+        @include breakpoint(tablet) {
+          grid-area: 1 / 1 / span 2 / span 1;
+          height: 100%;
+        }
+      }
+      &.inspired-2 {
+        @include breakpoint(tablet) {
+          grid-area: 1 / 2 / span 1 / span 1;
+          height: 100%;
+        }
+      }
     }
     div.description-2_information {
       background-color: $black;
       padding: 48px 24px;
+      @include breakpoint(tablet) {
+        padding: 85px 28px;
+      }
     }
     h2,
     h2 span {

@@ -3,18 +3,59 @@
 
 header.map {
   position: relative;
-  img.map {
+  img.map-mobile {
     width: 100%;
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+  img.map-tablet {
+    width: 100%;
+    display: none;
+    @include breakpoint(tablet) {
+      display: block;
+      @include breakpoint(desktop) {
+        display: none;
+      }
+    }
+  }
+  img.map-desktop {
+    width: 100%;
+    display: none;
+    @include breakpoint(desktop) {
+      display: block;
+    }
   }
   div.button {
     display: flex;
+    align-items: center;
+    justify-content: start;
     position: absolute;
     top: 0;
     left: 0;
+    &:hover {
+      a img.arrow-right {
+        background-color: $black;
+        transition: background-color 1s ease;
+      }
+      a.button-black {
+        background-color: $gold;
+        transition: background-color 1s ease;
+      }
+    }
+    @include breakpoint(tablet) {
+      top: 0;
+      left: 50px;
+    }
+    @include breakpoint(desktop) {
+      top: 0;
+      left: 100px;
+    }
 
     img.arrow-right {
       background-color: $gold;
       padding: 24px;
+      display: block;
     }
   }
 }
@@ -22,6 +63,16 @@ header.map {
 section.location {
   padding: 48px 16px 56px 16px;
   background-color: $black;
+  @include breakpoint(tablet) {
+    padding: 85px 40px;
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    gap: 90px;
+  }
+  @include breakpoint(desktop) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
   h1 {
     font-family: $primary-font;
     font-size: 50px;
@@ -54,6 +105,15 @@ footer.footer-location {
   background-color: $gold;
   div.footer {
     padding: 48px 24px;
+    @include breakpoint(tablet) {
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 56px;
+    }
+    @include breakpoint(desktop) {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
     img {
       width: 110px;
       margin-bottom: 38px;

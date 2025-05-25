@@ -5,6 +5,19 @@ footer {
   background-color: $black;
   div.footer {
     padding: 48px 24px;
+    @include breakpoint(tablet) {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      align-items: start;
+      gap: 65px;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 56px;
+    }
+    @include breakpoint(desktop) {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
     img {
       width: 110px;
       margin-bottom: 38px;
@@ -20,6 +33,10 @@ footer {
     div.social-media {
       display: flex;
       gap: 20px;
+      @include breakpoint(tablet) {
+        justify-content: end;
+      }
+
       img {
         width: 20px;
         margin: 0;
