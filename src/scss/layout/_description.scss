@@ -29,7 +29,7 @@ section {
     div.description-1_information {
       @include breakpoint(tablet) {
         grid-row: 1 / span 1;
-        padding-top: 40px;
+        padding-top: 100px;
         padding-bottom: 40px;
         padding-right: 40px;
       }

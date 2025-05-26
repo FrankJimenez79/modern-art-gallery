@@ -14,7 +14,7 @@ header.principal-header {
     &::before {
       content: "";
       background-color: $black;
-      height: 710px;
+      height: 829px;
     }
   }
   figure {
@@ -56,7 +56,7 @@ header.principal-header {
       @include breakpoint(desktop) {
         display: block;
         position: absolute;
-        left: 490px;
+        left: 280px;
         width: 400px;
       }
     }
