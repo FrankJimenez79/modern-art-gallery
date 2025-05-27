@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "find . -maxdepth 1 -name '*.html' ! -name 'index.html' -exec cp {} dist/ \\;",
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist"
   },
