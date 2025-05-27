@@ -7,9 +7,11 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "postbuild": "find . -maxdepth 1 -name '*.html' ! -name 'index.html' -exec cp {} dist/ \\;",
     "deploy": "npm run build && gh-pages -d dist"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "sass": "^1.89.0",
     "vite": "^6.3.2",
     "vite-plugin-html": "^3.2.2",
